@@ -6,6 +6,9 @@ from getpass import getpass
 
 print("----------------- Facebook Auto Login :)   -----------------")
 print("Select an option: \n1.Log in with new data \n2.Login with existing data")
+
+save_data = input("Save data to a file (Y/N) ?")
+
 user_choice = input("Choose a number: ")
 # save_data = input("Would you like to save this informations in a file (Y/N)? ")
 
@@ -15,6 +18,8 @@ def facebook_log():
     facebook_email = str(input("Enter your Email/username: "))
     print("The password is invisible but you still have to type it ")
     facebook_password = getpass('Enter your password:')
+
+    
 
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
